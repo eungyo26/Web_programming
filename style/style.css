@@ -1,0 +1,181 @@
+/*이미지 요소 배치*/
+.bg1-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1512px;
+}
+.treebg1-img {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 1512px;
+}
+.treebg2-img {
+  position: absolute;
+  top: -20px;
+  left: 1512px;
+  width: 1512px;
+}
+.tree1-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1512px;
+  opacity: 0.85;
+}
+
+.grass-img {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 1512px;
+  pointer-events: none;
+}
+
+.ground-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1512px;
+  pointer-events: none;
+}
+
+.childern-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 876px;
+}
+
+.w1-img {
+  position: absolute;
+  top: 175px;
+  left: -70px;
+  width: 150px;
+}
+
+.w2-img {
+  position: absolute;
+  top: 190px;
+  left: 120px;
+  width: 150px;
+}
+
+.w3-img {
+  position: absolute;
+  top: 195px;
+  left: 167px;
+  width: 145px;
+}
+
+.w4-img {
+  position: absolute;
+  top: 195px;
+  left: 315px;
+  width: 145px;
+}
+
+.w5-img {
+  position: absolute;
+  top: 185px;
+  left: 325px;
+  width: 150px;
+}
+
+.w6-img {
+  position: absolute;
+  top: 185px;
+  left: 480px;
+  width: 150px;
+}
+
+.w7-img {
+  position: absolute;
+  top: 200px;
+  left: 460px;
+  width: 140px;
+}
+
+.w8-img {
+  position: absolute;
+  top: 205px;
+  left: 615px;
+  width: 140px;
+}
+
+.w9-img {
+  position: absolute;
+  top: 200px;
+  left: 615px;
+  width: 150px;
+}
+
+.w10-img {
+  position: absolute;
+  top: 205px;
+  left: 790px;
+  width: 150px;
+}
+/*힌트 제공*/
+.kids-group {
+  position: absolute;
+  top: 450px;
+  left: 300px;
+  width: 876px;
+  height: 490px;
+  transition: 0.3s;
+}
+
+.kids-group:hover {
+  transform: scale(1.03);
+}
+
+/*바퀴 회전*/
+.wheel {
+  animation-name: move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+.wheelMove {
+  animation-play-state: running;
+}
+
+@keyframes move {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/*배경 움직임: 평소에는 멈춰 있음*/
+.treeMove {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3024px;
+  height: 827px;
+  animation-name: treebgMove;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+/*배경 움직임: hover 때 JS가 붙여서 재생*/
+.treebgMove {
+  animation-play-state: running;
+}
+
+@keyframes treebgMove {
+  from {
+    transform: translateX(-1512px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
